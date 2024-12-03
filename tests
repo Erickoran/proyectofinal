@@ -1,0 +1,8 @@
+// tests/test.js
+const assert = require('assert');
+
+describe('Pruebas Funcionales', () => {
+  it('Debe sumar 1 + 1 y dar 2', () => {
+    assert.strictEqual(1 + 1, 2);
+  });
+});
