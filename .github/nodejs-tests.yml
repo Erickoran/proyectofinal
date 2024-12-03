@@ -1,32 +1,27 @@
-name: Run Tests
+echo "name: Run Tests
 
 on:
   push:
     branches:
-      - main  # Ejecutar solo cuando haya un push a la rama 'main'
+      - main
   pull_request:
     branches:
-      - main  # Ejecutar cuando haya un PR hacia la rama 'main'
+      - main
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Usamos un contenedor de Ubuntu
+    runs-on: ubuntu-latest
 
     steps:
-      # Paso 1: Comprobar el código fuente desde GitHub
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Paso 2: Configurar Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Especifica la versión de Node.js
+          node-version: '14'
 
-      # Paso 3: Instalar dependencias del proyecto
       - name: Install dependencies
         run: npm install
 
-      # Paso 4: Ejecutar las pruebas
-      - name: Run tests
-        run: npm test
+      - name: Run
