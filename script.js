@@ -16,3 +16,7 @@ function enviarFormulario(event) {
     document.getElementById('formContacto').reset(); // Resetea el formulario después de enviarlo
 }
 
+"scripts": {
+  "test": "mocha"
+}
+
